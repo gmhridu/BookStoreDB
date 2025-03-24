@@ -27,3 +27,8 @@ WHERE
     quantity > 0
 GROUP BY
     customers.name;
+
+-- Calculate the total revenue generated from book sales
+SELECT SUM(books.price * quantity) AS total_revenue
+FROM orders
+    JOIN books ON orders.book_id = books.id;
