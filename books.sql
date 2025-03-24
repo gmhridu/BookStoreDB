@@ -38,3 +38,7 @@ SELECT * FROM books ORDER BY price DESC LIMIT 1;
 
 -- Find the average price of books in the store
 SELECT ROUND(AVG(price)) AS avg_book_price FROM books;
+
+-- Increase the price of all books published before 2000 by 10%
+UPDATE books SET price = price * 10% 
+  WHERE published_year < 2000;
