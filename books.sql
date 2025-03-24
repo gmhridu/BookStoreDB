@@ -27,5 +27,14 @@ INSERT INTO books
 
 SELECT * FROM books
 
+--Find books that are out of stock.
+
 SELECT title FROM books 
   WHERE stock = 0;
+
+
+--Retrieve the most expensive book in the store.
+SELECT * FROM books ORDER BY price DESC LIMIT 1;
+
+-- Find the average price of books in the store
+SELECT ROUND(AVG(price)) AS avg_book_price FROM books;
