@@ -23,4 +23,5 @@ VALUES (
         '2023-06-20'
     );
 
-SELECT * FROM customers
+SELECT * FROM customers;
+
