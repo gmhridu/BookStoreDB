@@ -32,3 +32,7 @@ GROUP BY
 SELECT SUM(books.price * quantity) AS total_revenue
 FROM orders
     JOIN books ON orders.book_id = books.id;
+
+-- 8. Delete customers who haven't placed any orders
+DELETE FROM customers 
+  WHERE id NOT IN (SELECT DISTINCT customer_id FROM orders);
